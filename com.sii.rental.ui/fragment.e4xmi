@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/descriptor/basic" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmi:id="_bu_1kB3oEeuoo85v3I4ryA">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_h8Eb0B3oEeuoo85v3I4ryA" featurename="descriptors" parentElementId="xpath:/">
+    <elements xsi:type="basic:PartDescriptor" xmi:id="_q_FUcB3oEeuoo85v3I4ryA" elementId="com.sii.rental.ui.rentalproperty" label="Rental Properties" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.parts.RentalPropertyPart">
+      <tags>View</tags>
+    </elements>
+  </fragments>
+</fragment:ModelFragments>
