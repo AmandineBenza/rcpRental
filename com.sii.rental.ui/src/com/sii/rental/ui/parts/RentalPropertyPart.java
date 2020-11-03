@@ -19,6 +19,7 @@ public class RentalPropertyPart {
 	
 	
 	private Label rentedObjectlabel1;
+	private Label customerLabel1;
 
 
 	@Inject
@@ -42,12 +43,18 @@ public class RentalPropertyPart {
 		gd.horizontalAlignment = SWT.FILL;
 		gd.horizontalSpan = 2;
 		rentedObjectlabel1.setLayoutData(gd);
+		
+		Label rentedTo = new Label(infoGroup, SWT.BORDER);
+		rentedTo.setText("Loué à ");
+		
+		customerLabel1 = new Label (infoGroup, SWT.NONE);
 		setRental(RentalCoreActivator.getAgency().getRentals().get(0));
 	}
 	
 	public void setRental(Rental r) 
 	{
 		rentedObjectlabel1.setText(r.getRentedObject().getName());
+		customerLabel1.setText(r.getCustomer().getDisplayName());
 
 	}
 		
