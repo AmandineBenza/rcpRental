@@ -7,6 +7,7 @@ import org.eclipse.jface.viewers.LabelProvider;
 
 import com.opcoach.training.rental.Customer;
 import com.opcoach.training.rental.RentalAgency;
+import com.opcoach.training.rental.RentalObject;
 
 public class RentalProvider extends LabelProvider implements ITreeContentProvider {
 	
@@ -27,7 +28,9 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		if(parentElement instanceof RentalAgency) {
 			RentalAgency agency = (RentalAgency) parentElement;
 			return new Node[] {
-				new Node(agency, Node.CLIENTS)	
+				new Node(agency, Node.CUSTOMER),
+				new Node(agency, Node.RENTAL),
+				new Node(agency, Node.OBJECTSTORENT)	
 			};
 		}
 		
@@ -47,6 +50,10 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		
 		else if (element instanceof Customer) {
 			return ((Customer) element).getDisplayName();
+		}
+		
+		else if (element instanceof RentalObject) {
+			return ((RentalObject) element).getName();
 		}
 		
 		return super.getText(element);
@@ -69,7 +76,10 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 	
 	class Node {
 		
-		public static final String CLIENTS = "Clients";
+		public static final String CUSTOMER = "Customer";
+		public static final String RENTAL = "Rental";
+		public static final String OBJECTSTORENT = "Objects to rent";
+
 
 		private RentalAgency agency;
 		
@@ -83,8 +93,16 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		
 		public Object[] getChildren() {
 			
-			if(label == CLIENTS) {
+			if(label == CUSTOMER) {
 				return agency.getCustomers().toArray();
+			}
+			
+			if(label == RENTAL) {
+				return agency.getRentals().toArray();
+			}
+			
+			if(label == OBJECTSTORENT) {
+				return agency.getObjectsToRent().toArray();
 			}
 			
 			return null;
