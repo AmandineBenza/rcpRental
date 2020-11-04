@@ -13,6 +13,7 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 
 import com.opcoach.training.rental.Rental;
+import com.opcoach.training.rental.RentalAgency;
 import com.sii.rental.core.RentalCoreActivator;
 
 public class RentalPropertyPart {
@@ -30,7 +31,7 @@ public class RentalPropertyPart {
 	}
 	
 	@PostConstruct
-	public void createContent(Composite parent) {
+	public void createContent(Composite parent, RentalAgency agency) {
 		Label label = new Label(parent, SWT.NONE);
 		label.setText("Hello");	
 		
@@ -66,7 +67,7 @@ public class RentalPropertyPart {
 		
 		endLabel = new Label(grpDates, SWT.NONE);
 
-		setRental(RentalCoreActivator.getAgency().getRentals().get(0));
+		setRental(agency.getRentals().get(0));
 	}
 	
 	public void setRental(Rental r) 
