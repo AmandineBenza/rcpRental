@@ -3,8 +3,11 @@ package com.sii.rental.ui.parts;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+import javax.inject.Named;
 
+import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.di.Focus;
+import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -76,6 +79,11 @@ public class RentalPropertyPart {
 		startLabel.setText(r.getStartDate().toString());
 		endLabel.setText(r.getEndDate().toString());
 
+	}
+	
+	@Inject @Optional
+	public void receiveSelection(@Named(IServiceConstants.ACTIVE_SELECTION) Rental r) {
+		setRental(r);	
 	}
 		
 	
