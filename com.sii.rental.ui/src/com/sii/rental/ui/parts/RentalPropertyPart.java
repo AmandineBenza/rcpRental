@@ -74,11 +74,12 @@ public class RentalPropertyPart {
 	
 	public void setRental(Rental r) 
 	{
-		rentedObjectlabel1.setText(r.getRentedObject().getName());
-		customerLabel1.setText(r.getCustomer().getDisplayName());
-		startLabel.setText(r.getStartDate().toString());
-		endLabel.setText(r.getEndDate().toString());
-
+		if (rentedObjectlabel1 != null) {
+			rentedObjectlabel1.setText(r.getRentedObject().getName());
+			customerLabel1.setText(r.getCustomer().getDisplayName());
+			startLabel.setText(r.getStartDate().toString());
+			endLabel.setText(r.getEndDate().toString());	
+		}
 	}
 	
 	@Inject @Optional
