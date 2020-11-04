@@ -15,6 +15,7 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
 
 import com.opcoach.training.rental.Customer;
+import com.opcoach.training.rental.Rental;
 import com.opcoach.training.rental.RentalAgency;
 import com.opcoach.training.rental.RentalObject;
 import com.sii.rental.ui.RentalUIConstants;
@@ -86,6 +87,10 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		
 		if (element instanceof RentalObject) {
 			return registry.get(IMG_RENTAL_OBJECT);	
+		}
+		
+		if (element instanceof Rental) {
+			return registry.get(IMG_RENTAL);
 		}
 		
 		return null;	
