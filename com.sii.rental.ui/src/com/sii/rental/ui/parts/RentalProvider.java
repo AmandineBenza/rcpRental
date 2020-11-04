@@ -9,6 +9,7 @@ import com.opcoach.training.rental.Customer;
 import com.opcoach.training.rental.RentalAgency;
 
 public class RentalProvider extends LabelProvider implements ITreeContentProvider {
+	
 
 	@Override
 	public Object[] getElements(Object inputElement) {
@@ -24,7 +25,14 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 	public Object[] getChildren(Object parentElement) {
 		
 		if(parentElement instanceof RentalAgency) {
-			return ((RentalAgency) parentElement).getCustomers().toArray();
+			RentalAgency agency = (RentalAgency) parentElement;
+			return new Node[] {
+				new Node(agency, Node.CLIENTS)	
+			};
+		}
+		
+		else if (parentElement instanceof Node) {
+			return ((Node) parentElement).getChildren();
 		}
 		
 		return null;
@@ -55,5 +63,39 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		// TODO Auto-generated method stub
 		return true;
 	}
+	
+	
+	
+	
+	class Node {
+		
+		public static final String CLIENTS = "Clients";
+
+		private RentalAgency agency;
+		
+		private String label;
+
+		public Node(RentalAgency agency, String label) {
+			super();
+			this.agency = agency;
+			this.label = label;
+		}
+		
+		public Object[] getChildren() {
+			
+			if(label == CLIENTS) {
+				return agency.getCustomers().toArray();
+			}
+			
+			return null;
+		}
+		
+		@Override
+		public String toString() {
+			return label;
+		}
+				
+	}
+
 
 }
