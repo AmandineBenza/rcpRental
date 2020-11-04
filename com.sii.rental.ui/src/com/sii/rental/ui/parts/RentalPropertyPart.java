@@ -14,7 +14,6 @@ import org.eclipse.swt.widgets.Label;
 
 import com.opcoach.training.rental.Rental;
 import com.opcoach.training.rental.RentalAgency;
-import com.sii.rental.core.RentalCoreActivator;
 
 public class RentalPropertyPart {
 	

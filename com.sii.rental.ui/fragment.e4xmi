@@ -4,6 +4,7 @@
     <elements xsi:type="basic:PartDescriptor" xmi:id="_q_FUcB3oEeuoo85v3I4ryA" elementId="com.sii.rental.ui.rentalproperty" label="Rental Properties" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.parts.RentalPropertyPart">
       <tags>View</tags>
     </elements>
+    <elements xsi:type="basic:PartDescriptor" xmi:id="_oqBkgB6LEeupeLJbhz9QYA" elementId="com.sii.rental.ui.agencyview" label="Agency View" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.parts.AgencyPart"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_TPCDkB6AEeupeLJbhz9QYA" featurename="addons" parentElementId="xpath:/">
     <elements xsi:type="application:Addon" xmi:id="_bhWfEB6AEeupeLJbhz9QYA" elementId="com.sii.rental.ui.addon.0" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.RentalAddon"/>
