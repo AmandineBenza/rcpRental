@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="ASCII"?>
-<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/descriptor/basic" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmi:id="_bu_1kB3oEeuoo85v3I4ryA">
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/descriptor/basic" xmlns:basic_1="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmi:id="_bu_1kB3oEeuoo85v3I4ryA">
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_h8Eb0B3oEeuoo85v3I4ryA" featurename="descriptors" parentElementId="xpath:/">
-    <elements xsi:type="basic:PartDescriptor" xmi:id="_q_FUcB3oEeuoo85v3I4ryA" elementId="com.sii.rental.ui.rentalproperty" label="Rental Properties" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.parts.RentalPropertyPart">
+    <elements xsi:type="basic:PartDescriptor" xmi:id="_q_FUcB3oEeuoo85v3I4ryA" elementId="com.sii.rental.ui.rentalproperty" label="Rental Properties" iconURI="platform:/plugin/com.sii.rental.ui/icons/Rentals.png" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.parts.RentalPropertyPart">
       <tags>View</tags>
     </elements>
-    <elements xsi:type="basic:PartDescriptor" xmi:id="_oqBkgB6LEeupeLJbhz9QYA" elementId="com.sii.rental.ui.agencyview" label="Agency View" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.parts.AgencyPart"/>
+    <elements xsi:type="basic:PartDescriptor" xmi:id="_oqBkgB6LEeupeLJbhz9QYA" elementId="com.sii.rental.ui.agencyview" label="Agency View" iconURI="platform:/plugin/com.sii.rental.ui/icons/Agency.png" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.parts.AgencyPart"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_TPCDkB6AEeupeLJbhz9QYA" featurename="addons" parentElementId="xpath:/">
     <elements xsi:type="application:Addon" xmi:id="_bhWfEB6AEeupeLJbhz9QYA" elementId="com.sii.rental.ui.addon.0" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.RentalAddon"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_R21j8B60EeupeLJbhz9QYA" featurename="snippets" parentElementId="xpath:/">
+    <elements xsi:type="advanced:Perspective" xmi:id="_huIz0B60EeupeLJbhz9QYA" elementId="com.sii.rental.ui.perspective.rental" selectedElement="_ngX4MB60EeupeLJbhz9QYA" label="Rental" iconURI="platform:/plugin/com.sii.rental.ui/icons/Agency.png">
+      <children xsi:type="basic_1:PartSashContainer" xmi:id="_ngX4MB60EeupeLJbhz9QYA" elementId="com.sii.rental.ui.partsashcontainer" selectedElement="_1F_ZUB60EeupeLJbhz9QYA">
+        <children xsi:type="basic_1:PartStack" xmi:id="_1F_ZUB60EeupeLJbhz9QYA" elementId="com.sii.rental.ui.partstack" selectedElement="_2nYTkB60EeupeLJbhz9QYA">
+          <children xsi:type="advanced:Placeholder" xmi:id="_2nYTkB60EeupeLJbhz9QYA" elementId="com.sii.rental.ui.agencyview"/>
+        </children>
+        <children xsi:type="advanced:Placeholder" xmi:id="_KIs-IB61EeupeLJbhz9QYA" elementId="com.sii.rental.ui.rentalproperty"/>
+      </children>
+    </elements>
   </fragments>
 </fragment:ModelFragments>
