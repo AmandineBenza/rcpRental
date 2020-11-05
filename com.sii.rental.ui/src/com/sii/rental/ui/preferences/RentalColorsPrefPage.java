@@ -16,6 +16,8 @@ public class RentalColorsPrefPage extends FieldEditorPreferencePage implements R
 	@Override
 	protected void createFieldEditors() {
 		addField(new ColorFieldEditor(PREF_CUSTOMER_COLOR, "Customer Color", getFieldEditorParent()));
+		addField(new ColorFieldEditor(PREF_RENTAL_COLOR, "Rental Color", getFieldEditorParent()));
+		addField(new ColorFieldEditor(PREF_RENTAL_OBJECT_COLOR, "Rental Object Color", getFieldEditorParent()));
 
 	}
 
