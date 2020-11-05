@@ -7,11 +7,11 @@ import org.eclipse.e4.core.di.annotations.CanExecute;
 import org.eclipse.e4.core.di.annotations.Evaluate;
 import org.eclipse.e4.core.di.annotations.Execute;
 import org.eclipse.e4.ui.services.IServiceConstants;
-import org.eclipse.swt.widgets.Display;
+import org.eclipse.jface.wizard.WizardDialog;
+import org.eclipse.swt.widgets.Shell;
 
-import com.opcoach.training.rental.Customer;
 import com.opcoach.training.rental.RentalAgency;
-import com.opcoach.training.rental.RentalFactory;
+import com.sii.rental.ui.wizard.CustomerWizard;
 
 public class HandlerCreateCustomer {
 	
@@ -24,12 +24,11 @@ public class HandlerCreateCustomer {
 	}
 
 	@Execute
-	public void execute(Display display, @Named(IServiceConstants.ACTIVE_SELECTION) RentalAgency agency) {
-		Customer c = RentalFactory.eINSTANCE.createCustomer();
-		c.setFirstName("Customer");
-		c.setLastName("Num"+System.currentTimeMillis());
-		agency.getCustomers().add(c);	
-		System.out.println("Creation of new customer" + c.getDisplayName());
+	public void execute(Shell shell, @Named(IServiceConstants.ACTIVE_SELECTION) RentalAgency agency) {
+		CustomerWizard wizard = new CustomerWizard(agency);
+		WizardDialog dialog = new WizardDialog(shell, wizard);
+		dialog.open();
+
 	}
 		
 }
