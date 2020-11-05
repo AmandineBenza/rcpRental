@@ -10,12 +10,16 @@ import org.eclipse.swt.widgets.Shell;
 
 public class HandlerHello {
 	
+	
+	
 	@Execute
 	public void execute(@Named(IServiceConstants.ACTIVE_SHELL) Shell shell) {
 		
 		MessageDialog.openInformation(shell, "Hello", "Hello there");
 		
 	}
+	
+	
 	
 		
 }

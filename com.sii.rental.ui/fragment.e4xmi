@@ -4,7 +4,19 @@
     <elements xsi:type="basic:PartDescriptor" xmi:id="_q_FUcB3oEeuoo85v3I4ryA" elementId="com.sii.rental.ui.rentalproperty" label="Rental Properties" iconURI="platform:/plugin/com.sii.rental.ui/icons/Rentals.png" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.parts.RentalPropertyPart">
       <tags>View</tags>
     </elements>
-    <elements xsi:type="basic:PartDescriptor" xmi:id="_oqBkgB6LEeupeLJbhz9QYA" elementId="com.sii.rental.ui.agencyview" label="Agency View" iconURI="platform:/plugin/com.sii.rental.ui/icons/Agency.png" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.parts.AgencyPart"/>
+    <elements xsi:type="basic:PartDescriptor" xmi:id="_oqBkgB6LEeupeLJbhz9QYA" elementId="com.sii.rental.ui.agencyview" label="Agency View" iconURI="platform:/plugin/com.sii.rental.ui/icons/Agency.png" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.parts.AgencyPart">
+      <menus xmi:id="_twlksB9GEeupeLJbhz9QYA" elementId="com.sii.rental.ui.viewmenuhello" label="Hello !">
+        <tags>ViewMenu</tags>
+        <children xsi:type="menu:Menu" xmi:id="_zD0_8B9GEeupeLJbhz9QYA" elementId="com.sii.rental.ui.menuhello" label="Hello ?">
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_85mLMB9GEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handledmenuitemhello" label="Hello again" iconURI="platform:/plugin/com.sii.rental.ui/icons/sample.gif" command="_KVR0kB9EEeupeLJbhz9QYA"/>
+        </children>
+      </menus>
+      <menus xsi:type="menu:PopupMenu" xmi:id="_aIlN4B9HEeupeLJbhz9QYA" elementId="com.sii.rental.ui.popupmenuhello" label="Hellooooo">
+        <children xsi:type="menu:Menu" xmi:id="_356IoB9HEeupeLJbhz9QYA" elementId="com.sii.rental.ui.menuhellooo" label="Hellooo">
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_5rYtUB9HEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handledmenuitemhellooo" label="HELLO" iconURI="platform:/plugin/com.sii.rental.ui/icons/sample.gif" command="_KVR0kB9EEeupeLJbhz9QYA"/>
+        </children>
+      </menus>
+    </elements>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_TPCDkB6AEeupeLJbhz9QYA" featurename="addons" parentElementId="xpath:/">
     <elements xsi:type="application:Addon" xmi:id="_bhWfEB6AEeupeLJbhz9QYA" elementId="com.sii.rental.ui.addon.0" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.RentalAddon"/>
@@ -29,6 +41,11 @@
     <elements xsi:type="menu:MenuContribution" xmi:id="_xV2QoB9FEeupeLJbhz9QYA" elementId="com.sii.rental.ui.menucontribution.0" positionInParent="after=additions" parentId="org.eclipse.ui.main.menu">
       <children xsi:type="menu:Menu" xmi:id="_5xiDgB9FEeupeLJbhz9QYA" elementId="mainmenu" label="MenuE4">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_BZM_gB9GEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handledmenuitem.0" iconURI="platform:/plugin/com.sii.rental.ui/icons/sample.gif" command="_KVR0kB9EEeupeLJbhz9QYA"/>
+      </children>
+    </elements>
+    <elements xsi:type="menu:MenuContribution" xmi:id="_b7ww0B9JEeupeLJbhz9QYA" elementId="com.sii.rental.ui.menucontributionhelloagain" positionInParent="after=additions" parentId="popup">
+      <children xsi:type="menu:Menu" xmi:id="_hyukMB9JEeupeLJbhz9QYA" elementId="mainmenu" label="MenuE4All">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_hyukMR9JEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handledmenuitem.0" iconURI="platform:/plugin/com.sii.rental.ui/icons/sample.gif" command="_KVR0kB9EEeupeLJbhz9QYA"/>
       </children>
     </elements>
   </fragments>

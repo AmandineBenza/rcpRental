@@ -1,4 +1,4 @@
- 
+
 package com.sii.rental.ui.parts;
 
 import java.util.Arrays;
@@ -8,6 +8,7 @@ import javax.inject.Inject;
 
 import org.eclipse.e4.core.contexts.ContextInjectionFactory;
 import org.eclipse.e4.core.contexts.IEclipseContext;
+import org.eclipse.e4.ui.services.EMenuService;
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -18,15 +19,16 @@ import org.eclipse.swt.widgets.Composite;
 import com.opcoach.training.rental.RentalAgency;
 
 public class AgencyPart {
-		
-	
+
+	private static final String MENU_ID = "com.sii.rental.ui.popupmenuhello";
+
 	@Inject
 	public AgencyPart() {
-		
+
 	}
-	
+
 	@PostConstruct
-	public void postConstruct(Composite parent, RentalAgency agency, IEclipseContext ctx, ESelectionService selectionService) {
+	public void postConstruct(Composite parent, RentalAgency agency, IEclipseContext ctx, ESelectionService selectionService,EMenuService menuService) {
 		
 		TreeViewer tree = new TreeViewer(parent);
 		
@@ -52,10 +54,8 @@ public class AgencyPart {
 			}
 		});
 		
+		menuService.registerContextMenu(tree.getControl(), MENU_ID);
+	
 	}
-	
-	
-		
 
-	
 }
