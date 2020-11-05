@@ -5,6 +5,7 @@ Bundle-SymbolicName: com.sii.rental.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: com.sii.rental.ui.RentalUIActivator
 Bundle-Vendor: SII
+Export-Package: com.sii.rental.ui
 Require-Bundle: org.eclipse.core.runtime,
  com.sii.rental.core;bundle-version="1.0.0",
  org.eclipse.jface,
@@ -16,8 +17,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.e4.ui.workbench,
  org.eclipse.e4.ui.services
 Bundle-RequiredExecutionEnvironment: JavaSE-14
-Automatic-Module-Name: com.sii.rental.ui
+Bundle-ActivationPolicy: lazy
 Import-Package: javax.annotation;version="1.0.0";resolution:=optional,
  javax.inject;version="1.0.0"
-Bundle-ActivationPolicy: lazy
-Export-Package: com.sii.rental.ui
+Automatic-Module-Name: com.sii.rental.ui

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/descriptor/basic" xmlns:basic_1="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmi:id="_bu_1kB3oEeuoo85v3I4ryA">
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/descriptor/basic" xmlns:basic_1="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_bu_1kB3oEeuoo85v3I4ryA">
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_h8Eb0B3oEeuoo85v3I4ryA" featurename="descriptors" parentElementId="xpath:/">
     <elements xsi:type="basic:PartDescriptor" xmi:id="_q_FUcB3oEeuoo85v3I4ryA" elementId="com.sii.rental.ui.rentalproperty" label="Rental Properties" iconURI="platform:/plugin/com.sii.rental.ui/icons/Rentals.png" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.parts.RentalPropertyPart">
       <tags>View</tags>
@@ -16,6 +16,19 @@
           <children xsi:type="advanced:Placeholder" xmi:id="_2nYTkB60EeupeLJbhz9QYA" elementId="com.sii.rental.ui.agencyview"/>
         </children>
         <children xsi:type="advanced:Placeholder" xmi:id="_KIs-IB61EeupeLJbhz9QYA" elementId="com.sii.rental.ui.rentalproperty"/>
+      </children>
+    </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_7NMbIB9DEeupeLJbhz9QYA" featurename="commands" parentElementId="xpath:/">
+    <elements xsi:type="commands:Command" xmi:id="_KVR0kB9EEeupeLJbhz9QYA" elementId="com.sii.rental.ui.commandhello" commandName="Hello" description="Print &quot;Hello&quot;"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_jgrtEB9EEeupeLJbhz9QYA" featurename="handlers" parentElementId="xpath:/">
+    <elements xsi:type="commands:Handler" xmi:id="_q1ewYB9EEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handlerHello" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.handlers.HandlerHello" command="_KVR0kB9EEeupeLJbhz9QYA"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_vHgJwB9FEeupeLJbhz9QYA" featurename="menuContributions" parentElementId="xpath:/">
+    <elements xsi:type="menu:MenuContribution" xmi:id="_xV2QoB9FEeupeLJbhz9QYA" elementId="com.sii.rental.ui.menucontribution.0" positionInParent="after=additions" parentId="org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_5xiDgB9FEeupeLJbhz9QYA" elementId="mainmenu" label="MenuE4">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_BZM_gB9GEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handledmenuitem.0" iconURI="platform:/plugin/com.sii.rental.ui/icons/sample.gif" command="_KVR0kB9EEeupeLJbhz9QYA"/>
       </children>
     </elements>
   </fragments>
