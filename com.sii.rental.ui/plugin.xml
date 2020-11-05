@@ -9,5 +9,13 @@
             apply="always">
       </fragment>
    </extension>
+   <extension
+         point="com.opcoach.e4.preferences.e4PreferencePages">
+      <page
+            class="com.sii.rental.ui.preferences.RentalColorsPrefPage"
+            id="com.sii.rental.ui.preferencescolors"
+            name="Rental Colors">
+      </page>
+   </extension>
 
 </plugin>
