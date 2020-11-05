@@ -6,6 +6,7 @@ import javax.inject.Named;
 import org.eclipse.e4.core.di.annotations.CanExecute;
 import org.eclipse.e4.core.di.annotations.Evaluate;
 import org.eclipse.e4.core.di.annotations.Execute;
+import org.eclipse.e4.core.services.events.IEventBroker;
 import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.swt.dnd.Clipboard;
 import org.eclipse.swt.dnd.RTFTransfer;
@@ -26,7 +27,7 @@ public class HandlerCopyCustomer {
 	}
 
 	@Execute
-	public void execute(Display display, @Named(IServiceConstants.ACTIVE_SELECTION) Customer customer) {
+	public void execute(IEventBroker broker, Display display, @Named(IServiceConstants.ACTIVE_SELECTION) Customer customer) {
 	
 	 	Clipboard clipboard = new Clipboard(display);
 		String textData = customer.getDisplayName();
@@ -38,6 +39,10 @@ public class HandlerCopyCustomer {
 		clipboard.setContents(data, transfers);
 		clipboard.dispose();
 		
+		broker.send("customer/copy", customer);
+		
 	}
+	
+	
 		
 }
