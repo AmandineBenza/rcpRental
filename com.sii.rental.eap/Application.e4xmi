@@ -16,8 +16,8 @@
         <children xsi:type="menu:HandledMenuItem" xmi:id="_6wlLj8gZEeSyMNYR5xypkQ" elementId="com.sii.rental.eap.handleditem.about" label="About" command="_6wlLhsgZEeSyMNYR5xypkQ"/>
       </children>
     </mainMenu>
-    <trimBars xmi:id="_6wlLlcgZEeSyMNYR5xypkQ" elementId="com.sii.rental.eap.trimbar.top">
-      <children xsi:type="menu:ToolBar" xmi:id="_6wlLlsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.toolbar">
+    <trimBars xmi:id="_6wlLlcgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.toolbar">
+      <children xsi:type="menu:ToolBar" xmi:id="_6wlLlsgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.default.toolbar">
         <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLmMgZEeSyMNYR5xypkQ" elementId="com.sii.rental.eap.handleditem.trimbar.top.save" iconURI="platform:/plugin/com.sii.rental.eap/icons/save_edit.png" command="_6wlLg8gZEeSyMNYR5xypkQ"/>
         <children xsi:type="menu:HandledToolItem" xmi:id="_6wlLl8gZEeSyMNYR5xypkQ" elementId="com.sii.rental.eap.handleditem.trimbar.top.open" iconURI="platform:/plugin/com.sii.rental.eap/icons/open_in_app.png" command="_6wlLgMgZEeSyMNYR5xypkQ"/>
       </children>

@@ -16,6 +16,9 @@
           <children xsi:type="menu:HandledMenuItem" xmi:id="_5rYtUB9HEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handledmenuitemhellooo" label="HELLO" iconURI="platform:/plugin/com.sii.rental.ui/icons/sample.gif" command="_KVR0kB9EEeupeLJbhz9QYA"/>
         </children>
       </menus>
+      <toolbar xmi:id="_asRiEB9NEeupeLJbhz9QYA" elementId="com.sii.rental.ui.toolbar.0">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_dMXgQB9NEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handledtoolitem.0" iconURI="platform:/plugin/com.sii.rental.ui/icons/Agency.png" command="_KVR0kB9EEeupeLJbhz9QYA"/>
+      </toolbar>
     </elements>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_TPCDkB6AEeupeLJbhz9QYA" featurename="addons" parentElementId="xpath:/">
@@ -46,6 +49,13 @@
     <elements xsi:type="menu:MenuContribution" xmi:id="_b7ww0B9JEeupeLJbhz9QYA" elementId="com.sii.rental.ui.menucontributionhelloagain" positionInParent="after=additions" parentId="popup">
       <children xsi:type="menu:Menu" xmi:id="_hyukMB9JEeupeLJbhz9QYA" elementId="mainmenu" label="MenuE4All">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_hyukMR9JEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handledmenuitem.0" iconURI="platform:/plugin/com.sii.rental.ui/icons/sample.gif" command="_KVR0kB9EEeupeLJbhz9QYA"/>
+      </children>
+    </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_8QwI4B9OEeupeLJbhz9QYA" featurename="trimContributions" parentElementId="xpath:/">
+    <elements xsi:type="menu:TrimContribution" xmi:id="__FPCsB9OEeupeLJbhz9QYA" elementId="com.sii.rental.ui.trimcontribution.0" parentId="org.eclipse.ui.main.toolbar" positionInParent="after=additions">
+      <children xsi:type="menu:ToolBar" xmi:id="_DbQnwB9PEeupeLJbhz9QYA" elementId="com.sii.rental.ui.toolbar.1">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_ES1I8B9PEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handledtoolitem.1" iconURI="platform:/plugin/com.sii.rental.ui/icons/Agency.png" command="_KVR0kB9EEeupeLJbhz9QYA"/>
       </children>
     </elements>
   </fragments>
