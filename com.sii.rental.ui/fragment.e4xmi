@@ -20,6 +20,9 @@
         <children xsi:type="menu:HandledMenuItem" xmi:id="_hESlUB9TEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handledmenuitem.copycustomer" label="Copy customer" command="__KFbkB9QEeupeLJbhz9QYA">
           <visibleWhen xsi:type="ui:ImperativeExpression" xmi:id="_G4g_gB9UEeupeLJbhz9QYA" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.handlers.HandlerCopyCustomer"/>
         </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_jMNMsB9WEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handledmenuitem.createcustomer" label="Create Customer" command="_TI8kcB9WEeupeLJbhz9QYA">
+          <visibleWhen xsi:type="ui:ImperativeExpression" xmi:id="_lDzngB9WEeupeLJbhz9QYA" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.handlers.HandlerCreateCustomer"/>
+        </children>
       </menus>
       <toolbar xmi:id="_asRiEB9NEeupeLJbhz9QYA" elementId="com.sii.rental.ui.toolbar.0">
         <children xsi:type="menu:HandledToolItem" xmi:id="_dMXgQB9NEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handledtoolitem.0" iconURI="platform:/plugin/com.sii.rental.ui/icons/Agency.png" command="_KVR0kB9EEeupeLJbhz9QYA"/>
@@ -41,9 +44,11 @@
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_7NMbIB9DEeupeLJbhz9QYA" featurename="commands" parentElementId="xpath:/">
     <elements xsi:type="commands:Command" xmi:id="_KVR0kB9EEeupeLJbhz9QYA" elementId="com.sii.rental.ui.commandhello" commandName="Hello" description="Print &quot;Hello&quot;"/>
+    <elements xsi:type="commands:Command" xmi:id="_TI8kcB9WEeupeLJbhz9QYA" elementId="com.sii.rental.ui.commandcreatecustomer" commandName="Create Customer"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_jgrtEB9EEeupeLJbhz9QYA" featurename="handlers" parentElementId="xpath:/">
     <elements xsi:type="commands:Handler" xmi:id="_q1ewYB9EEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handlerHello" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.handlers.HandlerHello" command="_KVR0kB9EEeupeLJbhz9QYA"/>
+    <elements xsi:type="commands:Handler" xmi:id="_bwjTcB9WEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handler.1" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.handlers.HandlerCreateCustomer" command="_TI8kcB9WEeupeLJbhz9QYA"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_vHgJwB9FEeupeLJbhz9QYA" featurename="menuContributions" parentElementId="xpath:/">
     <elements xsi:type="menu:MenuContribution" xmi:id="_xV2QoB9FEeupeLJbhz9QYA" elementId="com.sii.rental.ui.menucontribution.0" positionInParent="after=additions" parentId="org.eclipse.ui.main.menu">
