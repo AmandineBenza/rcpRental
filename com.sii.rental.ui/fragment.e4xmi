@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
-<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/descriptor/basic" xmlns:basic_1="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_bu_1kB3oEeuoo85v3I4ryA">
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/descriptor/basic" xmlns:basic_1="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmlns:ui="http://www.eclipse.org/ui/2010/UIModel/application/ui" xmi:id="_bu_1kB3oEeuoo85v3I4ryA">
+  <imports xsi:type="commands:Command" xmi:id="__KFbkB9QEeupeLJbhz9QYA" elementId="org.eclipse.ui.edit.copy"/>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_h8Eb0B3oEeuoo85v3I4ryA" featurename="descriptors" parentElementId="xpath:/">
     <elements xsi:type="basic:PartDescriptor" xmi:id="_q_FUcB3oEeuoo85v3I4ryA" elementId="com.sii.rental.ui.rentalproperty" label="Rental Properties" iconURI="platform:/plugin/com.sii.rental.ui/icons/Rentals.png" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.parts.RentalPropertyPart">
       <tags>View</tags>
     </elements>
     <elements xsi:type="basic:PartDescriptor" xmi:id="_oqBkgB6LEeupeLJbhz9QYA" elementId="com.sii.rental.ui.agencyview" label="Agency View" iconURI="platform:/plugin/com.sii.rental.ui/icons/Agency.png" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.parts.AgencyPart">
+      <handlers xmi:id="_kKtOkB9REeupeLJbhz9QYA" elementId="com.sii.rental.ui.handler.0" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.handlers.HandlerCopyCustomer" command="__KFbkB9QEeupeLJbhz9QYA"/>
       <menus xmi:id="_twlksB9GEeupeLJbhz9QYA" elementId="com.sii.rental.ui.viewmenuhello" label="Hello !">
         <tags>ViewMenu</tags>
         <children xsi:type="menu:Menu" xmi:id="_zD0_8B9GEeupeLJbhz9QYA" elementId="com.sii.rental.ui.menuhello" label="Hello ?">
@@ -14,6 +16,9 @@
       <menus xsi:type="menu:PopupMenu" xmi:id="_aIlN4B9HEeupeLJbhz9QYA" elementId="com.sii.rental.ui.popupmenuhello" label="Hellooooo">
         <children xsi:type="menu:Menu" xmi:id="_356IoB9HEeupeLJbhz9QYA" elementId="com.sii.rental.ui.menuhellooo" label="Hellooo">
           <children xsi:type="menu:HandledMenuItem" xmi:id="_5rYtUB9HEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handledmenuitemhellooo" label="HELLO" iconURI="platform:/plugin/com.sii.rental.ui/icons/sample.gif" command="_KVR0kB9EEeupeLJbhz9QYA"/>
+        </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_hESlUB9TEeupeLJbhz9QYA" elementId="com.sii.rental.ui.handledmenuitem.copycustomer" label="Copy customer" command="__KFbkB9QEeupeLJbhz9QYA">
+          <visibleWhen xsi:type="ui:ImperativeExpression" xmi:id="_G4g_gB9UEeupeLJbhz9QYA" contributionURI="bundleclass://com.sii.rental.ui/com.sii.rental.ui.handlers.HandlerCopyCustomer"/>
         </children>
       </menus>
       <toolbar xmi:id="_asRiEB9NEeupeLJbhz9QYA" elementId="com.sii.rental.ui.toolbar.0">
