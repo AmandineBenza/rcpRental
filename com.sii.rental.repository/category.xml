@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="com.sii.rental.ui.feature">
+      <category name="com.sii.rental"/>
+   </feature>
+   <category-def name="com.sii.rental" label="Rental"/>
+</site>
