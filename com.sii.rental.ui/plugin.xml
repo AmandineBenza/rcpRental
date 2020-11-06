@@ -36,6 +36,11 @@
             name="Default"
             paletteClass="com.sii.rental.ui.palettes.DefaultPalette">
       </palette>
+      <palette
+            id="com.sii.rental.ui.palette2"
+            name="ShinyPalette"
+            paletteClass="com.sii.rental.ui.palettes.ShinyPalette">
+      </palette>
    </extension>
 
 </plugin>
