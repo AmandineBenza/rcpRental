@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.sii.rental.ui.feature_1.0.0.qualifier.jar" id="com.sii.rental.ui.feature" version="1.0.0.qualifier">
+      <category name="com.sii.rental"/>
+   </feature>
+   <category-def name="com.sii.rental" label="Rental">
+      <description>
+         Blabla
+      </description>
+   </category-def>
+</site>
