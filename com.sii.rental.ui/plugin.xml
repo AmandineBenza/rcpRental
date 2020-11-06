@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin>
+   <extension-point id="palette" name="palette" schema="schema/palette.exsd"/>
 
    <extension
          id="com.sii.rental.ui.fragment"
@@ -27,6 +28,14 @@
       <initializer
             class="com.sii.rental.ui.preferences.RentalDefaultPref">
       </initializer>
+   </extension>
+   <extension
+         point="com.sii.rental.ui.palette">
+      <palette
+            id="com.sii.rental.ui.palette1"
+            name="Default"
+            paletteClass="com.sii.rental.ui.palettes.DefaultPalette">
+      </palette>
    </extension>
 
 </plugin>
