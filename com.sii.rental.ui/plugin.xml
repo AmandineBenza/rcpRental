@@ -18,9 +18,15 @@
    <extension
          point="com.opcoach.e4.preferences.e4PreferencePages">
       <page
+            category="com.sii.rental.ui.rentalpalette"
             class="com.sii.rental.ui.preferences.RentalColorsPrefPage"
             id="com.sii.rental.ui.preferencescolors"
-            name="Rental Colors">
+            name="Default Palette Colors">
+      </page>
+      <page
+            class="com.sii.rental.ui.preferences.RentalPalettePreferences"
+            id="com.sii.rental.ui.rentalpalette"
+            name="Rental Palette">
       </page>
    </extension>
    <extension

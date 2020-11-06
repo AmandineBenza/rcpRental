@@ -40,6 +40,7 @@ public class RentalAddon implements RentalUIConstants {
 		ctx.set(RENTAL_UI_IMG_REGISTRY, getLocalImageRegistry());
 		ctx.set(RENTAL_UI_PREF_STORE, new ScopedPreferenceStore(InstanceScope.INSTANCE, PLUGIN_ID));
 		readPalettes(registry, ctx);
+		ctx.set(PALETTE_MANAGER, paletteManager);
 		getExtensions(registry);
 	}
 	
