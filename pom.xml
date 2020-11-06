@@ -57,7 +57,7 @@
 					</environments>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-toolchains-plugin</artifactId>
@@ -90,6 +90,8 @@
 		<module>com.sii.rental.ui</module>
 		<module>com.sii.rental.ui.feature</module>
 		<module>com.sii.rental.eap</module>
+		<module>com.sii.rental.repository</module>
+
 	</modules>
 
 
