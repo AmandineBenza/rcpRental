@@ -1,27 +1,24 @@
 package com.sii.rental.ui.parts;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.eclipse.jface.preference.IPreferenceStore;
-import org.eclipse.jface.resource.ColorRegistry;
 import org.eclipse.jface.resource.ImageRegistry;
-import org.eclipse.jface.resource.JFaceResources;
-import org.eclipse.jface.resource.StringConverter;
 import org.eclipse.jface.viewers.IColorProvider;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
-import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.swt.widgets.Display;
 
 import com.opcoach.training.rental.Customer;
 import com.opcoach.training.rental.Rental;
 import com.opcoach.training.rental.RentalAgency;
 import com.opcoach.training.rental.RentalObject;
+import com.sii.rental.ui.Palette;
 import com.sii.rental.ui.RentalUIConstants;
 
 public class RentalProvider extends LabelProvider implements ITreeContentProvider, IColorProvider, RentalUIConstants {
@@ -32,6 +29,9 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 	
 	@Inject @Named(RENTAL_UI_PREF_STORE)
 	private IPreferenceStore prefStore;
+	
+	@Inject @Named(PALETTE_MANAGER)
+	private Map<String, Palette> palettesManager;
 
 	@Override
 	public Object[] getElements(Object inputElement) {
@@ -118,45 +118,32 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 	@Override
 	public Color getForeground(Object element) {
 		
-		if (element instanceof Customer) {
-			return getAColor(PREF_CUSTOMER_COLOR);
-			
-		}
+		String paletteID = prefStore.getString(PREF_PALETTE);
+		Palette palette = palettesManager.get(paletteID);
 		
-		else if (element instanceof Rental) {
-			return getAColor(PREF_RENTAL_COLOR);
-			
-		}
+		IColorProvider provider = palette.getProvider();
 		
-		else if (element instanceof RentalObject) {
-			return getAColor(PREF_RENTAL_OBJECT_COLOR);
-			
+		if (provider != null) {
+			return provider.getForeground(element);
 		}
 		
 		return null;
+
 	}
 
 	@Override
 	public Color getBackground(Object element) {
-		// TODO Auto-generated method stub
+		String paletteID = prefStore.getString(PREF_PALETTE);
+		Palette palette = palettesManager.get(paletteID);
+		
+		IColorProvider provider = palette.getProvider();
+		
+		if (provider != null) {
+			return provider.getBackground(element);
+		}
+		
 		return null;
 	}
-	
-	private Color getAColor(String prefKString) {
-		
-		String rgbKString = prefStore.getString(prefKString);
-		
-		ColorRegistry reg = JFaceResources.getColorRegistry(); 
-		Color col = reg.get(rgbKString);
-		
-		if(col == null) {
-			reg.put(rgbKString, StringConverter.asRGB(rgbKString));
-			col = reg.get(rgbKString);
-		}
-		return col;	
-	}
-	
-	
 	
 	
 	class Node {
