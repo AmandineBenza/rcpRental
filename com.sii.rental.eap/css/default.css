@@ -1,0 +1,16 @@
+Tree {
+  /* actual values */
+  background-color: #2f2f2f;	/* declared in CSS: rgb(47, 47, 47) */
+  background-image: none;
+  color: #aaaaaa;	/* declared in CSS: rgb(170, 170, 170) */
+  font-family: .AppleSystemUIFont;	/* declared in CSS: #org-eclipse-ui-workbench-TREE_TABLE_FONT */
+  font-size: 15;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: none;
+  visibility: visible;
+
+  /* declared in CSS rules */
+  swt-header-background-color: rgb(56, 61, 63);
+  swt-header-color: rgb(204, 204, 204);
+}
