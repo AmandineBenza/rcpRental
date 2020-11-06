@@ -4,6 +4,10 @@ package com.sii.rental.ui;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+import org.eclipse.core.runtime.IConfigurationElement;
+import org.eclipse.core.runtime.IExtension;
+import org.eclipse.core.runtime.IExtensionPoint;
+import org.eclipse.core.runtime.IExtensionRegistry;
 import org.eclipse.core.runtime.preferences.InstanceScope;
 import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.core.di.annotations.Optional;
@@ -22,10 +26,11 @@ import com.opcoach.training.rental.helpers.RentalAgencyGenerator;
 public class RentalAddon implements RentalUIConstants {
 	
 	@PostConstruct
-	public void publishInContext(IEclipseContext ctx) {
+	public void publishInContext(IEclipseContext ctx, IExtensionRegistry registry) {
 		ctx.set(RentalAgency.class, RentalAgencyGenerator.createSampleAgency());
 		ctx.set(RENTAL_UI_IMG_REGISTRY, getLocalImageRegistry());
 		ctx.set(RENTAL_UI_PREF_STORE, new ScopedPreferenceStore(InstanceScope.INSTANCE, PLUGIN_ID));
+		getExtensions(registry);
 	}
 	
 	/**
@@ -55,6 +60,27 @@ public class RentalAddon implements RentalUIConstants {
 	@Optional 
 	public void reactCustomer(@UIEventTopic("customer/*") Customer customer) {
 		System.out.println("The Customer " + customer.getDisplayName() + " was copied.");
+	}
+	
+	private void getExtensions(IExtensionRegistry registry) {
+		
+		IExtensionPoint extensionPoint = registry.getExtensionPoint("org.eclipse.e4.workbench.model");
+		IExtension[] extensions = extensionPoint.getExtensions();
+		
+		for (IExtension ext : extensions) {
+			
+			for (IConfigurationElement conf : ext.getConfigurationElements()) {
+				
+				if(conf.getName().equals("fragment")) {
+					System.out.println("Model fragment : " + conf.getAttribute("uri") + " found in " + conf.getNamespaceIdentifier());
+				}
+				
+				else if(conf.getName().equals("processor")) {
+					System.out.println("Processor : " + conf.getAttribute("class") + " found in " + conf.getNamespaceIdentifier());
+				}
+			}
+			
+		}
 	}
 
 
