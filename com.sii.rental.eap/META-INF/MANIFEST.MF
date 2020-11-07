@@ -18,7 +18,7 @@ Require-Bundle: javax.inject;bundle-version="0.0.0",
  com.sii.rental.ui;bundle-version="1.0.0",
  org.eclipse.osgi.services,
  com.opcoach.e4.preferences.mainmenu
-Bundle-RequiredExecutionEnvironment: JavaSE-14
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: com.sii.rental.eap
 Import-Package: javax.annotation;version="0.0.0"
 Bundle-ActivationPolicy: lazy

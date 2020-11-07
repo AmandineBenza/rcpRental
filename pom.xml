@@ -13,6 +13,15 @@
 		<targetArtifact>com.sii.rental.tp</targetArtifact>
 		<targetVersion>4.17.0-SNAPSHOT</targetVersion>
 	</properties>
+	
+	<repositories>
+	<repository>
+        <id>2020-09</id>
+        <layout>p2</layout>
+        <url>http://download.eclipse.org/releases/2020-09</url>
+     </repository>
+	
+	</repositories>
 
 	<build>
 		<plugins>
@@ -88,8 +97,8 @@
 		<module>com.sii.rental.tp</module>
 		<module>com.sii.rental.core</module>
 		<module>com.sii.rental.ui</module>
-		<module>com.sii.rental.ui.feature</module>
 		<module>com.sii.rental.eap</module>
+		<module>com.sii.rental.ui.feature</module>
 		<module>com.sii.rental.repository</module>
 
 	</modules>

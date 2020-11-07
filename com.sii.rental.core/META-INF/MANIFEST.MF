@@ -7,7 +7,7 @@ Bundle-Activator: com.sii.rental.core.RentalCoreActivator
 Bundle-Vendor: SII
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
-Bundle-RequiredExecutionEnvironment: JavaSE-14
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: com.sii.rental.core
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: lib/rental.jar,
